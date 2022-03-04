@@ -1,14 +1,19 @@
 <template>
     <the-navigation></the-navigation>
-    <router-view />
+    <main>
+        <router-view />
+    </main>
+    <the-footer></the-footer>
 </template>
 
 <script>
 import TheNavigation from "./components/ui/TheNavigation.vue";
+import TheFooter from "./components/ui/TheFooter.vue";
 
 export default {
     components: {
         TheNavigation,
+        TheFooter
     },
 };
 </script>

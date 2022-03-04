@@ -5,19 +5,19 @@
         </h1>
         <ul class="nav_links">
             <li>
-                <a class="beers" href="./beer.html">BEERS</a>
+                <router-link to="/beers">BEERS</router-link>
             </li>
             <li>
-                <a class="taproom" href="./taproom.html">TAPROOM</a>
+                <router-link to="/taproom">TAPROOM</router-link>
             </li>
             <li>
-                <a class="brewery" href="./brewery.html">BREWERY</a>
+                <router-link to="/brewery">BREWERY</router-link>
             </li>
             <li>
-                <a class="about" href="./about.html">ABOUT</a>
+                <router-link to="/about">ABOUT</router-link>
             </li>
             <li>
-                <a class="events" href="./events.html">EVENTS</a>
+                <router-link to="/events">EVENTS</router-link>
             </li>
         </ul>
         <div class="hamburger" @click="hamburgerMenu">
