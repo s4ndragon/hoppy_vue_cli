@@ -61,6 +61,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     .logo {
+        margin: 0 10px;
         img {
             min-width: 200px;
             max-width: 200px;
@@ -69,7 +70,7 @@ nav {
     .nav_links {
         display: flex;
         list-style: none;
-        width: 100%;
+        width: 65%;
         height: 100%;
         justify-content: space-around;
         align-items: center;

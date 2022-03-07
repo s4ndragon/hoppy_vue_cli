@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        taproom
     </div>
 </template>
 
