@@ -4,19 +4,19 @@
             <router-link to="/"> <img src="../../assets/nav/logo.png" /></router-link>
         </h1>
         <ul class="nav_links">
-            <li>
+            <li @click="hamburgerMenu">
                 <router-link to="/beers">BEERS</router-link>
             </li>
-            <li>
+            <li @click="hamburgerMenu">
                 <router-link to="/taproom">TAPROOM</router-link>
             </li>
-            <li>
+            <li @click="hamburgerMenu">
                 <router-link to="/brewery">BREWERY</router-link>
             </li>
-            <li>
+            <li @click="hamburgerMenu">
                 <router-link to="/about">ABOUT</router-link>
             </li>
-            <li>
+            <li @click="hamburgerMenu">
                 <router-link to="/events">EVENTS</router-link>
             </li>
         </ul>
@@ -55,13 +55,15 @@ nav {
     position: fixed;
     z-index: 1000;
     width: 100%;
-    height: 90px;
+    height: 70px;
     background: #60a41d;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .logo {
         margin: 0 10px;
+        display: flex;
+        align-items: center;
         img {
             min-width: 200px;
             max-width: 200px;
@@ -94,7 +96,6 @@ nav {
 @media screen and (max-width: 991px) {
     nav {
         position: relative;
-        height: 10vh;
         flex-direction: row;
         align-items: unset;
 

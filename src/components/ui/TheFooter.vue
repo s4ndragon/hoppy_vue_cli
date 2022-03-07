@@ -1,31 +1,31 @@
 <template>
     <footer>
-        <div class="footer_openhour_container">
+        <div class="footer_openhour_container footer_block">
             <div class="openhour_title">
                 <h6>OPEN HOUR</h6>
             </div>
             <div class="openhour">
-                <div class="openhour_date">
-                    <div class="date" id="mon">Monday</div>
-                    <div class="date" id="tue">Tuesday</div>
-                    <div class="date" id="wed">Wednesday</div>
-                    <div class="date" id="thu">Thursday</div>
-                    <div class="date" id="fri">Friday</div>
-                    <div class="date" id="sat">Saturday</div>
-                    <div class="date" id="sun">Sunday</div>
-                </div>
-                <div class="openhour_time">
-                    <div class="time" id="mon_time">14:00 - 22:00</div>
-                    <div class="time" id="tue_time">14:00 - 22:00</div>
-                    <div class="time" id="wed_time">14:00 - 22:00</div>
-                    <div class="time" id="thu_time">14:00 - 22:00</div>
-                    <div class="time" id="fri_time">14:00 - 22:00</div>
-                    <div class="time" id="sat_time">12:00 - 22:00</div>
-                    <div class="time" id="sun_time">12:00 - 22:00</div>
-                </div>
+                <ul class="openhour_date">
+                    <li class="date" id="mon">Monday</li>
+                    <li class="date" id="tue">Tuesday</li>
+                    <li class="date" id="wed">Wednesday</li>
+                    <li class="date" id="thu">Thursday</li>
+                    <li class="date" id="fri">Friday</li>
+                    <li class="date" id="sat">Saturday</li>
+                    <li class="date" id="sun">Sunday</li>
+                </ul>
+                <ul class="openhour_time">
+                    <li class="time" id="mon_time">14:00 - 22:00</li>
+                    <li class="time" id="tue_time">14:00 - 22:00</li>
+                    <li class="time" id="wed_time">14:00 - 22:00</li>
+                    <li class="time" id="thu_time">14:00 - 22:00</li>
+                    <li class="time" id="fri_time">14:00 - 22:00</li>
+                    <li class="time" id="sat_time">12:00 - 22:00</li>
+                    <li class="time" id="sun_time">12:00 - 22:00</li>
+                </ul>
             </div>
         </div>
-        <div class="footer_middle">
+        <div class="footer_middle footer_block">
             <div class="footer_slogan_container">
                 <h4>DONT WORRY<br />BE HOPPY</h4>
             </div>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer_bac_container">
+        <div class="footer_bac_container footer_block">
             <div class="footer_bac_pic">
                 <img src="../../assets/footer/bac_transparent.png" />
             </div>
@@ -85,6 +85,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    .footer_block {
+        padding: 20px 0;
+    }
     .footer_openhour_container {
         /* border: 1px solid greenyellow; */
         display: flex;
@@ -115,6 +118,12 @@ footer {
             justify-content: center;
             align-content: center;
             align-items: center;
+            ul {
+                margin: 0 10px;
+                li {
+                    list-style: none;
+                }
+            }
         }
     }
     .footer_middle {
@@ -166,7 +175,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 30%;
+        width: 25%;
         .footer_bac_pic {
             /* border: 1px solid green; */
             img {
@@ -174,6 +183,15 @@ footer {
                 width: auto;
                 height: 300px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    footer {
+        flex-direction: column;
+        .footer_block {
+            width: 80%;
         }
     }
 }
