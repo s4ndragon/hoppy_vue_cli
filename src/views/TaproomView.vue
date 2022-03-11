@@ -1,15 +1,21 @@
+{
 <template>
-    <div>
-        taproom
-    </div>
+    <the-title the-seleted-title='TAPROOM'></the-title>
 </template>
 
 <script>
+import TheTitle from "../components/ui/TheTitle.vue";
+
 export default {
-    
-}
+    components: {
+        TheTitle,
+    },
+    data() {
+        return {
+
+        };
+    },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

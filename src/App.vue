@@ -1,6 +1,6 @@
 <template>
     <the-navigation></the-navigation>
-    <main>
+    <main >
         <router-view />
     </main>
     <the-footer></the-footer>
@@ -13,7 +13,26 @@ import TheFooter from "./components/ui/TheFooter.vue";
 export default {
     components: {
         TheNavigation,
-        TheFooter
+        TheFooter,
+    },
+    data() {
+        return {
+            theTitle: "",
+        };
+    },
+    provide() {
+        return {
+            theTitle: this.theTitle,
+        };
+    },
+    methods: {
+        getTheTitle(theTitle) {
+            this.theTitle = theTitle;
+            // console.log(theTitle);
+        },
+    },
+    created() {
+        
     },
 };
 </script>

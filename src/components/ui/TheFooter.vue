@@ -193,6 +193,29 @@ footer {
         .footer_block {
             width: 80%;
         }
+        .footer_middle {
+            .footer_media_container {
+                width: 400px;
+                margin: auto;
+            }
+        }
+        .footer_bac_container {
+            .footer_bac_pic {
+                img {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 481px) {
+    footer {
+        .footer_middle {
+            .footer_media_container {
+                width: 100%;
+            }
+        }
     }
 }
 </style>

@@ -4,23 +4,23 @@
             <router-link to="/"> <img src="../../assets/nav/logo.png" /></router-link>
         </h1>
         <ul class="nav_links">
-            <li @click="hamburgerMenu">
+            <li @click="hamburgerMenu('beers')">
                 <router-link to="/beers">BEERS</router-link>
             </li>
-            <li @click="hamburgerMenu">
+            <li @click="hamburgerMenu('taproom')">
                 <router-link to="/taproom">TAPROOM</router-link>
             </li>
-            <li @click="hamburgerMenu">
+            <li @click="hamburgerMenu('brewery')">
                 <router-link to="/brewery">BREWERY</router-link>
             </li>
-            <li @click="hamburgerMenu">
+            <li @click="hamburgerMenu('about')">
                 <router-link to="/about">ABOUT</router-link>
             </li>
-            <li @click="hamburgerMenu">
+            <li @click="hamburgerMenu('events')">
                 <router-link to="/events">EVENTS</router-link>
             </li>
         </ul>
-        <div class="hamburger" @click="hamburgerMenu">
+        <div class="hamburger" @click="hamburgerMenu('')">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -31,8 +31,13 @@
 
 <script>
 export default {
+    data() {
+        return {
+            theTitle: "",
+        };
+    },
     methods: {
-        hamburgerMenu() {
+        hamburgerMenu(theTitle) {
             const hamburger = document.querySelector(".hamburger");
             const navLinks = document.querySelector(".nav_links");
             const links = document.querySelectorAll(".nav_links li");
@@ -41,6 +46,12 @@ export default {
             links.forEach((link) => {
                 link.classList.toggle("fade");
             });
+            this.theTitle = theTitle;
+            console.log(theTitle);
+            console.log(this.theTitle);
+            // this.theTitle = theTitle;
+            // this.$emit("theTitle", theTitle);
+            // console.log(theTitle);
         },
     },
 };
@@ -95,7 +106,7 @@ nav {
 
 @media screen and (max-width: 991px) {
     nav {
-        position: relative;
+        // position: relative;
         flex-direction: row;
         align-items: unset;
 
