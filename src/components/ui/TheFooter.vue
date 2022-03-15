@@ -6,22 +6,22 @@
             </div>
             <div class="openhour">
                 <ul class="openhour_date">
+                    <li class="date" id="sun">Sunday</li>
                     <li class="date" id="mon">Monday</li>
                     <li class="date" id="tue">Tuesday</li>
                     <li class="date" id="wed">Wednesday</li>
                     <li class="date" id="thu">Thursday</li>
                     <li class="date" id="fri">Friday</li>
                     <li class="date" id="sat">Saturday</li>
-                    <li class="date" id="sun">Sunday</li>
                 </ul>
                 <ul class="openhour_time">
+                    <li class="time" id="sun_time">12:00 - 22:00</li>
                     <li class="time" id="mon_time">14:00 - 22:00</li>
                     <li class="time" id="tue_time">14:00 - 22:00</li>
                     <li class="time" id="wed_time">14:00 - 22:00</li>
                     <li class="time" id="thu_time">14:00 - 22:00</li>
                     <li class="time" id="fri_time">14:00 - 22:00</li>
                     <li class="time" id="sat_time">12:00 - 22:00</li>
-                    <li class="time" id="sun_time">12:00 - 22:00</li>
                 </ul>
             </div>
         </div>
@@ -66,7 +66,49 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            today: "",
+        };
+    },
+    methods: {
+        openHour() {
+            const today = new Date().getDay();
+            switch (today) {
+                case 0:
+                    this.today = "sun";
+                    break;
+                case 1:
+                    this.today = "mon";
+                    break;
+                case 2:
+                    this.today = "tue";
+                    break;
+                case 3:
+                    this.today = "wed";
+                    break;
+                case 4:
+                    this.today = "thu";
+                    break;
+                case 5:
+                    this.today = "fri";
+                    break;
+                case 6:
+                    this.today = "sat";
+                    break;
+            }
+            const choosenOpenDate = document.getElementById(`${this.today}`);
+            const choosenOpenHours = document.getElementById(`${this.today}_time`);
+            choosenOpenDate.innerHTML = 'TODAY'
+            choosenOpenDate.classList.add('today')
+            choosenOpenHours.classList.add('today')
+        },
+    },
+    mounted() {
+        this.openHour();
+    },
+};
 </script>
 
 <style scoped lang="scss">
@@ -110,6 +152,7 @@ footer {
                 padding: 0;
             }
         }
+
         .openhour {
             /* border: 1px solid pink; */
             font-family: "Montserrat", sans-serif;
@@ -119,11 +162,16 @@ footer {
             align-content: center;
             align-items: center;
             ul {
-                margin: 0 10px;
+                // padding: 0 10px;
                 li {
                     list-style: none;
+                padding: 0 10px;
+
                 }
             }
+        }
+        .today {
+            background-color: #60a41d;
         }
     }
     .footer_middle {
