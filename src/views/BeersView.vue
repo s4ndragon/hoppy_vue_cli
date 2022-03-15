@@ -1,6 +1,7 @@
 {
 <template>
     <the-title the-seleted-title='BEERS'></the-title>
+    
 </template>
 
 <script>

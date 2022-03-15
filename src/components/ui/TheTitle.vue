@@ -14,6 +14,7 @@ export default {
 h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 40px;
+    font-weight: 100;
     text-align: left;
     margin: 0 0 0 10px;
 }
