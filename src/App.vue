@@ -1,6 +1,6 @@
 <template>
     <the-navigation></the-navigation>
-    <main >
+    <main>
         <router-view />
     </main>
     <the-footer></the-footer>
@@ -31,9 +31,7 @@ export default {
             // console.log(theTitle);
         },
     },
-    created() {
-        
-    },
+    
 };
 </script>
 
@@ -50,6 +48,6 @@ body {
 }
 
 main {
-    padding-top: 90px;
+    // padding-top: 70px;
 }
 </style>

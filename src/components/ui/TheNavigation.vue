@@ -89,12 +89,18 @@ nav {
         align-items: center;
         margin-left: auto;
         padding-top: 5px;
-        li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 32px;
-            font-family: "Baloo Tamma 2", cursive;
-            font-weight: 700;
+        li {
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 32px;
+                font-family: "Baloo Tamma 2", cursive;
+                font-weight: 700;
+                // &:hover {
+                //     letter-spacing: 0.1vw;
+                //     transition: 0.5s;
+                // }
+            }
         }
     }
     .hamburger {
