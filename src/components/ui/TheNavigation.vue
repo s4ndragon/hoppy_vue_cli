@@ -110,7 +110,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
     nav {
         // position: relative;
         flex-direction: row;

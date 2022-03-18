@@ -44,7 +44,7 @@ export default {
         opacity: 0;
     }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
     .banner {
         h2 {
             font-size: 70px;

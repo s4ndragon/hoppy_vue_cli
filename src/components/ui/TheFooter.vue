@@ -235,7 +235,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
     footer {
         flex-direction: column;
         .footer_block {
@@ -257,7 +257,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 576px) {
     footer {
         .footer_middle {
             .footer_media_container {

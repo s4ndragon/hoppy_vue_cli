@@ -9,7 +9,7 @@
         </div>
         <div class="slide_right">
             <div class="slide_text" v-for="productsInfo in productsInfos" :key="productsInfo.id">
-                <h3 class="highlight">{{ productsInfo.name }}</h3>
+                <span class="">{{ productsInfo.name }}</span>
                 <h4>{{ productsInfo.title }}</h4>
                 <p>
                     {{ productsInfo.description }}
@@ -147,12 +147,13 @@ section {
         width: 40%;
         position: relative;
         .slide_text {
-            background-color: #77b329;
+            // background-color: #77b329;
+            border: 1px solid #77b329;
             // background-image: url(../../assets/home/products/slide_text_bg.png);
             padding: 10px 15px;
             display: none;
             color: #d3d3d3;
-            border-radius: 10px;
+            // border-radius: 10px;
             box-shadow: #3d3f436e 0px 3px 8px;
             max-height: 400px;
 
@@ -162,9 +163,23 @@ section {
                 background-size: 100% 95%;
                 padding: 8px 0;
             }
-            h3 {
+            span {
+                color: #222022;
                 font-size: 36px;
-                margin: 0.5em 0 0 0;
+                font-weight: 900;
+                margin: 0.5em 0 0 -4px;
+
+                box-decoration-break: clone;
+                background-image: linear-gradient(
+                    90deg,
+                    #ffef7e,
+                    #b7f9e9
+                );
+                background-size: 100% 42%;
+                background-repeat: no-repeat;
+                background-position: 0 85%;
+                padding: 0 4px;
+                margin-left: -4px;
             }
             p {
                 text-align: left;
@@ -172,16 +187,25 @@ section {
         }
     }
 }
-
+@media screen and (max-width: 992px) {
+    section {
+        width: 100%;
+        // justify-content: space-around;
+        .slide_left {
+            width: 45%;
+        }
+    }
+}
 @media screen and (max-width: 768px) {
     section {
         flex-direction: column;
+justify-content: space-around;
         .slide_left {
-        .slide_pic {
-            img {
-                max-height: 300px;
+            .slide_pic {
+                img {
+                    max-height: 300px;
+                }
             }
-        }
         }
         .slide_right {
             width: 80%;
