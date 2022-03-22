@@ -1,4 +1,4 @@
-{
+
 <template>
     <the-title the-seleted-title='TAPROOM'></the-title>
 </template>

@@ -1,4 +1,4 @@
-{
+
 <template>
     <the-title the-seleted-title='BREWERY'></the-title>
 </template>

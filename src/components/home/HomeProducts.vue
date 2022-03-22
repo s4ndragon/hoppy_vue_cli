@@ -25,7 +25,7 @@ import axios from "axios";
 export default {
     data() {
         return {
-            slideIndex: 1,
+            slideIndex: 0,
             productsInfos: [],
         };
     },
@@ -81,7 +81,9 @@ export default {
                 .then((response) => (vm.productsInfos = response.data));
         },
     },
-
+    created() {
+        this.getProductsInfo()
+    },
     mounted() {
         this.getProductsInfo();
         setTimeout(() => {
@@ -106,6 +108,10 @@ section {
             display: none;
             opacity: 0;
             transition: all 0.5s linear;
+            &:first-child {
+                display: block;
+                opacity: 1;
+            }
             img {
                 height: 80vh;
                 max-height: 450px;
@@ -156,7 +162,9 @@ section {
             // border-radius: 10px;
             box-shadow: #3d3f436e 0px 3px 8px;
             max-height: 400px;
-
+            &:first-child {
+                display: block;
+            }
             .highlight {
                 background: url(../../assets/home/products/brush.png);
                 background-repeat: no-repeat;

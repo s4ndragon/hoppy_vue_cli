@@ -1,6 +1,5 @@
-{
 <template>
-    <the-title the-seleted-title='ABOUT'></the-title>
+    <the-title the-seleted-title="ABOUT"></the-title>
 </template>
 
 <script>
@@ -11,9 +10,7 @@ export default {
         TheTitle,
     },
     data() {
-        return {
-
-        };
+        return {};
     },
 };
 </script>

@@ -48,6 +48,6 @@ body {
 }
 
 main {
-    // padding-top: 70px;
+    padding-top: 70px;
 }
 </style>

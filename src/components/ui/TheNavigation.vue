@@ -47,8 +47,8 @@ export default {
                 link.classList.toggle("fade");
             });
             this.theTitle = theTitle;
-            console.log(theTitle);
-            console.log(this.theTitle);
+            // console.log(theTitle);
+            // console.log(this.theTitle);
             // this.theTitle = theTitle;
             // this.$emit("theTitle", theTitle);
             // console.log(theTitle);

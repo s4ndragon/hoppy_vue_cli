@@ -4,6 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
         <home-banner></home-banner>
         <home-products></home-products>
+        <home-taps></home-taps>
     </div>
 </template>
 
@@ -12,6 +13,7 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 import HomeBanner from "@/components/home/HomeBanner.vue";
 import HomeProducts from "@/components/home/HomeProducts.vue";
+import HomeTaps from "@/components/home/HomeTaps.vue";
 
 export default {
     name: "HomeView",
@@ -19,6 +21,7 @@ export default {
         // HelloWorld
         HomeBanner,
         HomeProducts,
+        HomeTaps
     },
 };
 </script>

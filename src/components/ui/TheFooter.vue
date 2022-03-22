@@ -210,6 +210,7 @@ footer {
             div {
                 a {
                     i {
+                        transition: all 0.3s;
                         &:hover {
                             color: #60a41d !important;
                         }
