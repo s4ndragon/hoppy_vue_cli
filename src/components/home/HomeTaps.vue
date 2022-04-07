@@ -63,24 +63,27 @@ export default {
         margin: 20px 10px;
     }
     .tap_wrap {
-        width: 95%;
+        // width: 95%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-left: 15px;
+        margin-right: 15px;
     }
     .tap_info {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-direction: column;
-        width: calc(100%/3);
+        width: calc(95% / 3);
+        padding: 10px 0;
         a {
             color: #ffffff;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 32px;
             font-weight: 700;
+            text-align: left;
         }
         .tap_details {
             display: flex;
