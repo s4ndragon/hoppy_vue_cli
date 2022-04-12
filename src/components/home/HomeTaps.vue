@@ -2,22 +2,25 @@
     <section class="home_taps">
         <h3>ON TAP</h3>
         <ul class="tap_wrap">
-            <li class="tap_info" v-for="onTap in onTaps" :key="onTap.id">
-                <a href="">{{ onTap.name }}</a>
-                <ul class="tap_details">
-                    <li>{{ onTap.style }}</li>
-                    <li>｜</li>
-                    <li>{{ onTap.abv }}%</li>
-                </ul>
-            </li>
+            <beers-tap-list
+                v-for="onTap in onTaps"
+                :key="onTap.id"
+                :id="onTap.id"
+                :name="onTap.name"
+                :style="onTap.style"
+                :abv="onTap.abv"
+            ></beers-tap-list>
+            <!-- <beers-tap-list></beers-tap-list> -->
         </ul>
     </section>
 </template>
 
 <script>
 import axios from "axios";
+import BeersTapList from "@/components/beers/BeersTapList.vue";
 
 export default {
+    components: { BeersTapList },
     data() {
         return {
             onTaps: [
@@ -34,6 +37,7 @@ export default {
                 //     abv: 10.6,
                 // },
             ],
+            // selectedBeerId: "hoptimum",
         };
     },
     methods: {
@@ -42,6 +46,9 @@ export default {
             axios
                 .get("https://hoppy-vue-cli-bfe34-default-rtdb.asia-southeast1.firebasedatabase.app/homeTaps.json")
                 .then((response) => (vm.onTaps = response.data));
+        },
+        getClickedBeerId(onTap) {
+            this.selectedBeerId = onTap.id;
         },
     },
     created() {

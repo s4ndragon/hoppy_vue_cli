@@ -14,6 +14,7 @@
 import HomeBanner from "@/components/home/HomeBanner.vue";
 import HomeProducts from "@/components/home/HomeProducts.vue";
 import HomeTaps from "@/components/home/HomeTaps.vue";
+// import BeersTapList from "@/components/beers/BeersTapList.vue";
 
 export default {
     name: "HomeView",
@@ -21,7 +22,8 @@ export default {
         // HelloWorld
         HomeBanner,
         HomeProducts,
-        HomeTaps
+        HomeTaps,
+        // BeersTapList
     },
 };
 </script>
